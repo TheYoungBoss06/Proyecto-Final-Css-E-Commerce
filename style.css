@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+
+:root {
+	--color-fondo: rgb(141, 141, 141);
+	--color-header: rgb(255, 255, 255);
+	--color-buscador: rgb(228, 227, 227);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--color-fondo);
+
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	background-color: var(--color-header);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+header ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+}
+
+
+
+.nav li:hover{
+
+	background-color: rgb(97, 97, 150);
+	height: 100%;
+	color: white;
+	border-radius: 10px;
+
+}
+header ul li img {
+	height: 20px;
+	display: block;
+}
+
+ul li{
+	font-size: 15px;
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.logo img {
+	width: 70px;
+	height: 50px;
+}
+
+.buscador {
+	width: 300px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px 0px 0px 10px;
+	border: 1px solid var(--color-buscador);
+	margin-right: 50px;	
+}
+
+.buscador-movil{
+	width: 210px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding-bottom: 25px;
+    padding-top: 15px;
+}
+
+.buscador-movil input {
+	border-radius: 0px 10px 10px 0px;
+	border: none;
+	outline: none;
+}
+
+.cart-movil {
+	width: 50px;
+	height: 25px;
+}
+
+
+
+.buscador input {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px 10px 10px 0px;
+	border: none;
+	outline: none;
+}
+
+.buscador img {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.nav {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+}
+.nav:hover{
+	height: 50px;
+
+}
+
+.nav li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.nav li img {
+	height: 20px;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle2 {
+	display: none;
+
+}
+
+.menu-hamburguesa {
+	display: none;
+	font-size: 30px;
+	cursor: pointer;
+	position: sticky;
+	right: 900px;
+
+}
+
+
+
+
+
+/* Menu movil */
+.menu-movil {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 250px;
+	height: 100vh;
+	background: var(--color-header);
+	box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+	transition: left 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 25px;
+	z-index: 2;
+}
+
+.menu-movil::after{
+	content: "";
+    top: -8px; 
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: gray;
+	margin-bottom: 350px;
+	
+}
+
+
+.menu-movil ul {
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+.menu-movil li {
+	width: 300px;
+	padding: 15px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.menu-movil li:hover{
+	background-color: rgb(97, 97, 150);
+	height: 20%;
+	color: white;
+}
+.menu-movil li::before {
+    content: "";
+    position: absolute;
+    top: -8px; /* Posiciona la línea en la parte superior */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Ancho de la línea */
+    background-color: gray; /* Color de la línea */
+}
+
+
+
+.atras {
+	width: 30px;
+	margin-right: 185px;	
+	cursor: pointer;
+
+}
+
+.atras-ico {
+	width: 30px;
+	padding-bottom: 30px;
+
+}
+
+.lupa {
+	width: 20px;
+}
+
+.carrito-menu{
+	width: 200	px;
+}
+
+/* Activar el menú cuando el checkbox está marcado */
+#menu-toggle:checked + .menu-hamburguesa + .menu-movil {
+	left: 0; /* Muestra el menú móvil */
+}
+
+.cart {
+	width: 50px;
+	height: 25px;
+}
+
+.cart img {
+	width: 100%;
+	height: 100%;
+}
+
+.user{
+	width: 100px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 3px;
+	margin: 25px;
+}
+
+.user img{
+	border-radius: 50%;
+}
+
+.user p{
+	font-size: 15px;
+	font-weight:  600;
+	color: rgba(0, 0, 0, 0.726);
+}
+
+.banner-header{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	justify-content: space-between;
+	margin-left: 10px;
+}
+.banner-informacion h2{
+	font-size: 15px;
+}
+
+.banner-informacion p{
+	font-size: 10px;
+}
+.banner-informacion  img{
+	margin-left: 70px;
+
+}
+.redes-sociales{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+}
+
+/* comienso del main */
+
+
+
+main{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+}
+
+/* Estilos generales */
+.carousel {
+    width: 100%;  /* Ancho del carrusel */
+    height: 400px; /* Alto del carrusel */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 110%; /* Ajusta según el número de imágenes */
+    animation: slide 30s infinite; /* 30s por imagen */
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 100%;
+    position: relative; /* Necesario para posicionar los elementos encima */
+}
+
+.slide img {
+    width: 1920px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos del texto y botón encima de la imagen */
+.text-overlay {
+    position: absolute;
+    top: 35%; /* Centrado vertical */
+    left: 20%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    text-align: center;
+    color: white; /* Color de texto blanco */
+    padding: 50px;
+	background-color: rgba(0, 0, 0, 0.24);
+	border-radius: 20px;
+}
+
+.text-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.text-overlay button {
+    padding: 10px 20px;
+    background-color: #ff6600; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.text-overlay button:hover {
+    background-color: #cc5200; /* Color cuando se pasa el mouse */
+}
+
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); } 
+    
+    30% { transform: translateX(-100%); }
+    55% { transform: translateX(-100%); } 
+
+    60% { transform: translateX(-200%); }
+    85% { transform: translateX(-200%); } 
+    90% { transform: translateX(-300%); }
+    100% { transform: translateX(-300%); } 
+
+}
+
+
+
+.contenedor-carousel{
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	background-color: var(--color-header)
+}
+.targeta-carousel{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-header);
+	flex-wrap: wrap;
+	gap: 10px;
+
+}
+
+.contenedor-carousel {
+    display: flex;
+	height: 200px;
+    gap: 15px;
+    overflow-x: auto; /* Permite desplazamiento en móviles */
+    scroll-snap-type: x mandatory; /* Suaviza el scroll en móviles */
+    padding: 10px;
+}
+
+.targeta-carousel {
+    flex: 0 0 auto; 
+    width: 250px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+	margin: 25px;
+}
+
+.targeta-carousel img {
+    width: 40px; 
+    margin-top: 20px;
+}
+
+.targeta-carousel h2 {
+    font-size: 18px;
+}
+
+.targeta-carousel p {
+    font-size: 12px;
+    margin-left: 0; 
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+	/* Cambios para pantallas medianas, como tablets */
+	.header ul {
+		gap: 30px;
+	}
+
+	.buscador {
+		width: 250px;
+	}
+
+	.logo {
+		margin-left: 50px;
+	}
+
+	.buscador input {
+		height: 40px;
+		/* Ajusta el tamaño del input */
+	}
+}
+
+@media (max-width: 768px) {
+	/* Cambios para pantallas más pequeñas (tabletas en modo vertical y móviles grandes) */
+	.header ul {
+		gap: 20px;
+		justify-content: flex-start;
+		/* Alineación a la izquierda */
+	}
+
+	.buscador {
+		width: 20px;
+	}
+	.buscador input{
+		width: 220px;
+	}
+
+	.buscador input {
+		height: 40px;
+		/* Ajusta el tamaño del input */
+	}
+
+	.cart {
+		width: 40px;
+		height: 20px;
+	}
+
+	.cart img {
+		width: 100%;
+		height: 100%;
+	}
+	.contenedor-carousel {
+        flex-direction: row;
+        overflow-x: scroll; /* Permite deslizar las tarjetas */
+        scroll-snap-type: x mandatory;
+        padding: 10px 0;
+    }
+
+    .targeta-carousel {
+        width: 200px;
+    }
+
+    .targeta-carousel h2 {
+        font-size: 16px;
+    }
+
+    .targeta-carousel p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+	.header {
+		flex-direction: column;
+		padding: 10px;
+	}
+
+	.header ul {
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.logo {
+		margin-left: 0;
+	}
+
+	.buscador {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.cart {
+		width: 30px;
+		height: 20px;
+	}
+
+	.cart img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 15px;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.cart {
+		display: none;
+	}
+
+	.buscador {
+		width: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu-hamburguesa {
+		display: block;
+		padding-left: 10px;
+
+	}
+}
+
+@media (max-width: 983px) {
+    .nav li:nth-of-type(4), 
+    .nav li:nth-of-type(5) { 
+        display: none; /
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav li:nth-of-type(5) { 
+        display: none; 
+    }
+}
