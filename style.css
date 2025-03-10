@@ -488,6 +488,8 @@ main{
 	height: 300px;
     gap: 15px;
     overflow-Y: hidden;
+	overflow-x: hidden;
+
     padding: 10px;
 }
 
