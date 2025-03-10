@@ -287,7 +287,7 @@ ul li{
 
 .cart-dropdown {
     position: fixed;
-    top: 130px;
+    top: 317px;
     right: 5px;
     width: 200px;
     background-color: white;
@@ -299,9 +299,15 @@ ul li{
 	z-index: 5;
 }
 
+.imagen-cart{
+	width: 70px;
+	height: 70px;
+}
+
 /* Mostrar carrito cuando el checkbox está marcado */
 .toggle-cart:checked + .cart + .cart-dropdown {
     display: block;
+	position: relative;
 }
 
 .user{
