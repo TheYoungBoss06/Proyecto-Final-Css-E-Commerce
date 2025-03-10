@@ -698,8 +698,9 @@ main{
 
 	.contenedor-carousel {
         flex-direction: row;
-        overflow-x: scroll; /* Permite deslizar las tarjetas */
-        scroll-snap-type: x mandatory;
+        overflow-y: hidden; 
+		overflow-x: hidden; 
+
         padding: 10px 0;
     }
 
