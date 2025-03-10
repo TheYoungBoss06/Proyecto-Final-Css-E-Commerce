@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Wilson Shop</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,9 +16,11 @@
 			<p> Lunes a viernes 8:00 A.M. a 6:00 P.M.</p>
 		</div>
 		<div class="redes-sociales">
-			<img src="img/facebook.svg" alt="facebook">
-			<img src="img/instagram.svg" alt="instagram">
+			<img class="user" src="img/user.jpg" alt="Carrito">
+			<p>Wilson Espinal</p>
 		</div>
+
+
 	</div>
 
 	<header class="header">
@@ -39,13 +41,35 @@
 			<input placeholder="Buscar..." type="text">
 		</div>
 
-		<div class="cart">
+		<input type="checkbox" id="toggle-cart" class="toggle-cart">
+		<label for="toggle-cart" class="cart">
 			<img src="img/cart.svg" alt="Carrito">
+		</label>
+	
+		<div class="cart-dropdown">
+			<h3>Tu Carrito</h3>
+			<ul>
+				<li>
+					<img src="img/img-productos/producto-balon-1.jpg" alt="">
+					<h4>Producto 1</h4>
+					<p>Descripción breve del producto.</p>
+					<span>$10.00</span>
+				</li>
+				<li>
+					<img src="img/img-productos/producto-balon-1.jpg" alt="">
+					<h4>Producto 2</h4>
+					<p>Descripción breve del producto.</p>
+					<span>$15.00</span>
+				</li>
+				<li>
+					<img src="img/img-productos/producto-balon-1.jpg" alt="">
+					<h4>Producto 3</h4>
+					<p>Descripción breve del producto.</p>
+					<span>$20.00</span>
+				</li>
+			</ul>
 		</div>
-		<div class="user">
-			<img src="img/user.jpg" alt="Carrito">
-			<p>Wilson Espinal</p>
-		</div>
+
 
 
 		<input type="checkbox" id="menu-toggle">
@@ -66,9 +90,7 @@
 				<input placeholder="Buscar..." type="text">
 
 
-				<div class="cart-movil">
-					<img class="carrito-menu" src="img/cart.svg" alt="Carrito">
-				</div>
+
 			</div>
 			<ul>
 				<li><img src="img/house.svg" alt="Inicio"> Inicio</li>
@@ -260,7 +282,7 @@
 				</div>
 
 				<div class="footer-bottom">
-					<p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+					<p>&copy; 2025 Wilson Shop. Todos los derechos reservados.</p>
 				</div>
 			</footer>
 

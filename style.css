@@ -104,10 +104,7 @@ ul li{
 	outline: none;
 }
 
-.cart-movil {
-	width: 50px;
-	height: 25px;
-}
+
 
 
 
@@ -258,34 +255,59 @@ ul li{
 	left: 0; /* Muestra el menú móvil */
 }
 
+.toggle-cart {
+    display: none; /* Oculta el checkbox */
+}
+
 .cart {
-	width: 50px;
-	height: 25px;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    right: 20px;
 }
 
 .cart img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-dropdown {
+    position: fixed;
+    top: 130px;
+    right: 5px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: none;
+    border-radius: 5px;
+	z-index: 5;
+}
+
+/* Mostrar carrito cuando el checkbox está marcado */
+.toggle-cart:checked + .cart + .cart-dropdown {
+    display: block;
 }
 
 .user{
-	width: 100px;
+	width: 50px;
 	height: 50px;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
 	padding: 3px;
-	margin: 25px;
+	border-radius: 50%;
+
+
 }
 
-.user img{
-	border-radius: 50%;
-}
 
 .user p{
 	font-size: 15px;
 	font-weight:  600;
 	color: rgba(0, 0, 0, 0.726);
+	margin-right:  10px;
+
 }
 
 .banner-header{
@@ -351,12 +373,7 @@ main{
     object-fit: cover;
 }
 
-.imagen-footer img{
-	width: 100%;
-	margin-top: 20px;
 
-
-}
 
 /* Estilos del texto y botón encima de la imagen */
 .text-overlay {
@@ -487,6 +504,7 @@ main{
     text-align: center;
 	margin: 25px;
 	box-shadow: 3px 20px 10px rgba(0, 0, 0, 0.5);
+	
 
 
 	
@@ -537,7 +555,10 @@ main{
 	font-weight: 600;
 
 }
-
+.imagen-footer img{
+	width: 100%;
+	margin-top: 40px;
+}
 /* Estilos generales del footer */
 .footer {
     background-color: #333;
@@ -602,12 +623,12 @@ main{
 /* Estilo de la parte inferior del footer */
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 14px;
 }
 
 .footer-bottom p {
-    margin: 0;
+	margin: 0;
 }
 
 
@@ -638,6 +659,9 @@ main{
 
 @media (max-width: 770px) {
 	/* Cambios para pantallas más pequeñas (tabletas en modo vertical y móviles grandes) */
+	.carousel {
+        display: none;
+	}
 	.header ul {
 		gap: 20px;
 		justify-content: flex-start;
@@ -656,15 +680,7 @@ main{
 		/* Ajusta el tamaño del input */
 	}
 
-	.cart {
-		width: 40px;
-		height: 20px;
-	}
 
-	.cart img {
-		width: 100%;
-		height: 100%;
-	}
 	.contenedor-carousel {
         flex-direction: row;
         overflow-x: scroll; /* Permite deslizar las tarjetas */
@@ -734,9 +750,7 @@ main{
 		display: none;
 	}
 
-	.cart {
-		display: none;
-	}
+
 
 	.buscador {
 		width: 250px;
@@ -749,6 +763,10 @@ main{
 		display: block;
 		padding-left: 10px;
 
+		
+	}
+	.carousel {
+        display: none;
 	}
 }
 
