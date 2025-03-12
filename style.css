@@ -134,6 +134,7 @@ ul li{
 	display: flex;
 	gap: 20px;
 	list-style: none;
+
 }
 .nav:hover{
 	height: 50px;
@@ -143,11 +144,51 @@ ul li{
 .nav li {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	cursor: pointer;
+	text-decoration: none;
+	gap: 5px;
 }
 
+.nav li a { 
+    text-decoration: none; 
+    color: inherit; 
+	display: flex;
+	gap: 5px;
+	position: relative;
+}
 .nav li img {
 	height: 20px;
+}
+.submenu {
+    display: none; /* Ocultamos el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Lo posicionamos justo debajo del elemento principal */
+    left: 600px;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 2px;
+	width: 100px;}
+
+.submenu li a {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+
+}
+.dropdown:focus-within a {
+    outline: none; /* Opcional, quitar el borde del foco si lo prefieres */
+}
+
+.submenu li a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .submenu {
+    display: block;
 }
 
 #menu-toggle {
@@ -187,6 +228,7 @@ ul li{
 	align-items: center;
 	padding-top: 25px;
 	z-index: 2;
+	
 }
 
 .menu-movil::after{
@@ -206,6 +248,9 @@ ul li{
 	width: 100%;
 	text-align: center;
 	margin-bottom: 7px;
+
+	
+
 }
 
 .menu-movil li {
@@ -215,8 +260,17 @@ ul li{
 	display: flex;
 	align-items: center;
 	position: relative;
+	gap: 5px;
+
+
 }
 
+.menu-movil li a { 
+    text-decoration: none; 
+    color: inherit; 
+	display: flex;
+	gap: 6px;
+}
 .menu-movil li:hover{
 	background-color: #ff6600;
 	height: 20%;
@@ -393,7 +447,8 @@ main{
 }
 
 .slide img {
-    width: 1920px;
+    width: 100%;
+	height: 400px;
     object-fit: cover;
 }
 
@@ -402,7 +457,7 @@ main{
 /* Estilos del texto y botón encima de la imagen */
 .text-overlay {
     position: absolute;
-    top: 35%; /* Centrado vertical */
+    top: 50%; /* Centrado vertical */
     left: 20%; /* Centrado horizontal */
     transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
     text-align: center;
@@ -726,8 +781,110 @@ main{
 	margin: 0;
 }
 
+/*pagina de Quienes somos*/
 
 
+.about-container {
+	width: 80%;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 28px;
+}
+
+.about-container p {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.about-container .mission {
+	background-color: #e6f7ff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+}
+
+.about-container img {
+	width: 5%;
+	max-width: 500px;
+	display: block;
+	margin: 20px auto;
+	border-radius: 8px;
+}
+
+
+/* fin de pagina de Quienes somos*/
+
+
+
+/*pagina de contacto*/
+.titulo-contacto{
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+.contact-container {
+	width: 50%;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+	border: none;
+	transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+	background-color: #555;
+}
+
+
+.form-group textarea {
+	height: 150px;
+}
+
+/*fin de pagina de contacto*/
 
 
 /* MEDIA QUERIES */
