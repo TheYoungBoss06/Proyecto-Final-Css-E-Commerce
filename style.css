@@ -45,22 +45,26 @@ header ul {
 
 
 
-.nav li:hover{
-
-	background-color: #ff6600;
+.nav li span:hover{
+	color: #ff6600;
 	height: 100%;
-	color: white;
-	border-radius: 10px;
-	padding: 10px;
+	font-weight: 600;
+	border-bottom: 2px solid #cc5200;
 
 }
+
+
+
 header ul li img {
 	height: 20px;
 	display: block;
+
 }
 
 ul li{
 	font-size: 15px;
+	font-weight: 600;
+
 }
 
 .logo {
@@ -514,28 +518,76 @@ main{
 
 /* targetas productos */
 
+
 .targeta-productos {
-    flex: 0 0 auto; 
-    width: 250px;
+	flex: 0 0 auto; 
+	width: 250px;
 	height: 270px;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    text-align: center;
+	padding: 15px;
+	background: white;
+	border-radius: 10px;
+	text-align: center;
 	margin: 25px;
 	box-shadow: 3px 20px 10px rgba(0, 0, 0, 0.5);
-	
-
-
-	
-	
+	position: relative;
 }
 
 .targeta-productos img {
-    width: 100px; 
-	height: 100px;
-    margin-top: 20px;
+	width: 130px;
+	height: 130px;
+	cursor: pointer;
 }
+
+/* Ventana emergente cuando la imagen es clickeada */
+.imagen-pop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out;
+	z-index: 5;
+}
+
+/* Mostrar la imagen cuando se hace click */
+.imagen-pop:target {
+	opacity: 1;
+	visibility: visible;
+	
+}
+
+/* Imagen en pantalla completa */
+.imagen-pop img {
+    width: auto;  /* Permite que la imagen mantenga su tamaño original */
+    height: auto; /* Mantiene la proporción */
+    max-width: 95vw; /* Hasta el 95% del ancho de la pantalla */
+    max-height: 95vh; /* Hasta el 95% del alto de la pantalla */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+	background-color: #fff;
+}
+
+
+
+
+
+/* Botón para cerrar */
+.imagen-pop a {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 
 .targeta-productos h2 {
     font-size: 18px;
@@ -568,7 +620,29 @@ main{
 	border-radius: 5px;
 	margin-left: 45px;
 	margin-top: -7px;
+	
 }
+
+.ver-producto a{
+
+	text-decoration: none;
+
+
+}
+
+
+.ver-producto:hover{
+	width: 130px;
+	height: 35px;
+	background-color: #df5b03;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	margin-left: 45px;
+	margin-top: -7px;
+}
+
 
 .ver-producto h2{
 	font-size: 15px;
