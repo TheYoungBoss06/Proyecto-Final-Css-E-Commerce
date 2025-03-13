@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-/*scroll*/
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -19,7 +18,6 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #db3b17;
 }
-/*scroll*/
 
 :root {
 	--color-fondo: rgb(141, 141, 141);
@@ -173,9 +171,9 @@ header ul li img {
 	height: 20px;
 }
 .submenu {
-    display: none; /* Ocultamos el submenú por defecto */
+    display: none; 
     position: absolute;
-    top: 100%; /* Lo posicionamos justo debajo del elemento principal */
+    top: 100%; 
     left: 600px;
     background-color: #fff;
     list-style: none;
@@ -193,7 +191,7 @@ header ul li img {
 
 }
 .dropdown:focus-within a {
-    outline: none; /* Opcional, quitar el borde del foco si lo prefieres */
+    outline: none; 
 }
 
 .submenu li a:hover {
@@ -226,7 +224,6 @@ header ul li img {
 
 
 
-/* Menu movil */
 .menu-movil {
 	position: fixed;
 	top: 0;
@@ -292,11 +289,11 @@ header ul li img {
 .menu-movil li::before {
     content: "";
     position: absolute;
-    top: -8px; /* Posiciona la línea en la parte superior */
+    top: -8px; 
     left: 0;
     width: 100%;
-    height: 1px; /* Ancho de la línea */
-    background-color: gray; /* Color de la línea */
+    height: 1px; 
+    background-color: gray;
 }
 
 
@@ -322,13 +319,12 @@ header ul li img {
 	width: 200	px;
 }
 
-/* Activar el menú cuando el checkbox está marcado */
 #menu-toggle:checked + .menu-hamburguesa + .menu-movil {
-	left: 0; /* Muestra el menú móvil */
+	left: 0; 
 }
 
 .toggle-cart {
-    display: none; /* Oculta el checkbox */
+    display: none;
 }
 
 .cart {
@@ -366,7 +362,7 @@ header ul li img {
     display: none;
     border-radius: 5px;
     z-index: 5;
-    position: absolute; /* Asegúrate de que está posicionado correctamente */
+    position: absolute; 
 	justify-items: center;
 }
 
@@ -379,10 +375,9 @@ header ul li img {
 	height: 70px;
 }
 
-/* Mostrar carrito cuando el checkbox está marcado */
 .toggle-cart:checked + .cart + .cart-dropdown {
     display: block;
-    position: absolute;  /* Asegúrate de que está en el lugar correcto */
+    position: absolute;  
 }
 
 .user{
@@ -456,25 +451,25 @@ main{
 
 }
 
-/* Estilos generales */
+
 .carousel {
-    width: 100%;  /* Ancho del carrusel */
-    height: 400px; /* Alto del carrusel */
+    width: 100%;  
+    height: 400px; 
     overflow: hidden;
     position: relative;
-    border-radius: 10px; /* Bordes redondeados opcionales */
+    border-radius: 10px;
 }
 
 .carousel-inner {
     display: flex;
-    width: 110%; /* Ajusta según el número de imágenes */
-    animation: slide 30s infinite; /* 30s por imagen */
+    width: 110%; 
+    animation: slide 30s infinite; 
 }
 
 .slide {
     width: 100%;
     flex: 0 0 100%;
-    position: relative; /* Necesario para posicionar los elementos encima */
+    position: relative; 
 }
 
 .slide img {
@@ -485,14 +480,13 @@ main{
 
 
 
-/* Estilos del texto y botón encima de la imagen */
 .text-overlay {
     position: absolute;
-    top: 50%; /* Centrado vertical */
-    left: 20%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    top: 50%;
+    left: 20%; 
+    transform: translate(-50%, -50%); 
     text-align: center;
-    color: white; /* Color de texto blanco */
+    color: white; 
     padding: 50px;
 	background-color: rgba(0, 0, 0, 0.24);
 	border-radius: 20px;
@@ -510,7 +504,7 @@ main{
 
 .text-overlay button {
     padding: 10px 20px;
-    background-color: #ff6600; /* Color del botón */
+    background-color: #ff6600; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -519,11 +513,10 @@ main{
 }
 
 .text-overlay button:hover {
-    background-color: #cc5200; /* Color cuando se pasa el mouse */
+    background-color: #cc5200;
 }
 
 
-/* Animación del carrusel */
 @keyframes slide {
     0% { transform: translateX(0%); }
     25% { transform: translateX(0%); } 
@@ -593,8 +586,8 @@ main{
     display: flex;
 	height: 200px;
     gap: 15px;
-    overflow-Y: hidden; /* Permite desplazamiento en móviles */
-    scroll-snap-type: x mandatory; /* Suaviza el scroll en móviles */
+    overflow-Y: hidden; 
+    scroll-snap-type: x mandatory; 
     padding: 10px;
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
 
@@ -625,7 +618,6 @@ main{
 	cursor: pointer;
 }
 
-/* Ventana emergente cuando la imagen es clickeada */
 .imagen-pop {
 	position: fixed;
 	top: 0;
@@ -642,19 +634,17 @@ main{
 	z-index: 5;
 }
 
-/* Mostrar la imagen cuando se hace click */
 .imagen-pop:target {
 	opacity: 1;
 	visibility: visible;
 	
 }
 
-/* Imagen en pantalla completa */
 .imagen-pop img {
-    width: auto;  /* Permite que la imagen mantenga su tamaño original */
-    height: auto; /* Mantiene la proporción */
-    max-width: 95vw; /* Hasta el 95% del ancho de la pantalla */
-    max-height: 95vh; /* Hasta el 95% del alto de la pantalla */
+    width: auto;  
+    height: auto; 
+    max-width: 95vw; 
+    max-height: 95vh; 
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 	background-color: #fff;
@@ -664,7 +654,6 @@ main{
 
 
 
-/* Botón para cerrar */
 .imagen-pop a {
 	position: absolute;
 	top: 20px;
@@ -767,7 +756,6 @@ main{
 	width: 100%;
 	margin-top: 40px;
 }
-/* Estilos generales del footer */
 
 .footer {
     background-color: #333;
@@ -784,7 +772,6 @@ main{
     flex-wrap: wrap;
 }
 
-/* Estilo del menú */
 .footer-menu {
     flex: 1;
 }
@@ -813,7 +800,6 @@ main{
     text-decoration: underline;
 }
 
-/* Estilo del mapa */
 .footer-map {
     flex: 0.4
 }
@@ -829,7 +815,6 @@ main{
     border-radius: 8px;
 }
 
-/* Estilo de la parte inferior del footer */
 .footer-bottom {
     text-align: center;
     margin-top: 0px;
@@ -1257,7 +1242,6 @@ h1 {
 
 	.buscador input {
 		height: 40px;
-		/* Ajusta el tamaño del input */
 	}
 	
 }
@@ -1269,7 +1253,6 @@ h1 {
 	.header ul {
 		gap: 20px;
 		justify-content: flex-start;
-		/* Alineación a la izquierda */
 	}
 
 	.buscador {
@@ -1281,7 +1264,6 @@ h1 {
 
 	.buscador input {
 		height: 40px;
-		/* Ajusta el tamaño del input */
 	}
 
 
