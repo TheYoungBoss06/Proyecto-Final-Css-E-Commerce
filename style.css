@@ -1403,6 +1403,38 @@ h1 {
 		color: #555;
 		margin-top: 10px;
 	}
+
+
+	.quantity-controls {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+	
+	.quantity-controls button {
+		background-color: #ff6600;
+		color: white;
+		border: none;
+		padding: 5px 10px;
+		font-size: 16px;
+		cursor: pointer;
+		border-radius: 5px;
+		font-weight: bold;
+	}
+	
+	.quantity-controls button:hover {
+		background-color: #e55a00;
+	}
+	
+	.quantity-controls input {
+		width: 50px;
+		text-align: center;
+		font-size: 16px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		-moz-appearance: textfield;
+	}
+
 	/*----------------------*/
 
 
