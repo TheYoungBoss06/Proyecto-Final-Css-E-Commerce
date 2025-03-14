@@ -1076,7 +1076,7 @@ h1 {
 
 .payment-methods {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	margin-bottom: 20px;
 }
 
@@ -1094,7 +1094,6 @@ h1 {
 	width: 240px;
 	height: 40px;
 	display: flex;
-	margin-left: 180px;
 
 }
 
@@ -1501,6 +1500,17 @@ h1 {
 }
 
 @media (max-width: 480px) {
+	.contenedor {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 20px auto;
+		padding: 20px;
+		background-color: white;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		
+	}
 
 	.header {
 		flex-direction: column;
