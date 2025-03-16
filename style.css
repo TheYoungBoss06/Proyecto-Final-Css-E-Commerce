@@ -712,11 +712,12 @@ main {
 
 
 .contenedor-productos {
+	width: 100%;
 	display: flex;
 	overflow-Y: hidden;
 	overflow-X: hidden;
-	gap: 10px;
 	padding: 20px;
+	justify-content: center;
 
 }
 
@@ -909,7 +910,7 @@ main {
 	color: #333;
 }
 
-.remove-btn {
+.remover-btn {
 	width: 100px;
 	padding: 5px 10px;
 	font-size: 0.9em;
@@ -920,7 +921,7 @@ main {
 	cursor: pointer;
 }
 
-.remove-btn:hover {
+.remover-btn:hover {
 	background-color: #df5b03;
 }
 
@@ -931,7 +932,7 @@ main {
 	font-weight: bold;
 }
 
-.checkout-btn {
+.verificar-btn {
 	padding: 10px 20px;
 	background-color: #28a745;
 	color: white;
@@ -941,7 +942,7 @@ main {
 	font-size: 1.1em;
 }
 
-.checkout-btn:hover {
+.verificar-btn:hover {
 	background-color: #218838;
 }
 
@@ -972,7 +973,7 @@ p {
 	font-size: 1.2rem;
 }
 
-.button {
+.boton1 {
 	width: 300px;
 	background-color: #ff6600;
 	color: white;
@@ -988,7 +989,7 @@ p {
 	margin-top: 20px;
 }
 
-.button:hover {
+.boton1:hover {
 	background-color: #ca5202;
 }
 
@@ -1055,7 +1056,7 @@ button:hover {
 
 /*pagina de pasarela de pago*/
 
-.payment-container {
+.contenedor-de-pago {
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
@@ -1074,30 +1075,30 @@ h1 {
 	margin-bottom: 30px;
 }
 
-.payment-methods {
+.metodo-de-pago {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
 }
 
-.payment-methods label {
+.metodo-de-pago label {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 }
 
-.payment-radio {
+.radio-pago {
 	display: none;
 }
 
-.payment-logo {
+.pago-logo {
 	width: 240px;
 	height: 40px;
 	display: flex;
 
 }
 
-.payment-radio:checked+span {
+.pago-logo:checked+span {
 	font-weight: bold;
 }
 
@@ -1143,15 +1144,15 @@ h1 {
 	border-color: #007bff;
 }
 
-.payment-radio:checked+span+.payment-form {
+.radio-pago:checked+span+.payment-form {
 	display: block;
 }
 
-.payment-radio:checked+span+.payment-form .paypal-form {
+.radio-pago:checked+span+.payment-form .paypal-form {
 	display: block;
 }
 
-.payment-radio:checked+span+.payment-form .card-form {
+.radio-pago:checked+span+.payment-form .card-form {
 	display: block;
 }
 
